@@ -13,5 +13,9 @@
 (setq inhibit-startup-message t)
 
 ;; evil mode
+;; C-i act as vim
+(setq evil-want-C-i-jump nil)
+;; C-u act as vim
+(setq evil-want-C-u-scroll t)
 (require `evil)
 (evil-mode t)
