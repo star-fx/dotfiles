@@ -19,7 +19,6 @@
 
 " }
 
-
 " Tab key {
 
     set smarttab
