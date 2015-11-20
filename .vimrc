@@ -12,6 +12,9 @@
     set backspace=start,eol,indent
     set title
     set visualbell
+    set hidden
+    set wrap
+    set linebreak
     syntax enable
     syntax on
     filetype plugin indent on
@@ -21,8 +24,8 @@
 
 " Tab key {
 
-    set smarttab
     set tabstop=4
+    set softtabstop=4
     set shiftwidth=4
     set expandtab
 
@@ -33,6 +36,7 @@
     set incsearch
     set hlsearch
     set ignorecase
+    set smartcase
     set showmatch
 
 " }
