@@ -1,8 +1,6 @@
 " Basic {
 
     set nocompatible
-    set nobomb
-    set noeb
     set number
     set ruler
     set showcmd
@@ -50,6 +48,18 @@
     runtime macros/matchit.vim
 
 " }
+
+
+" GUI {
+
+    if has("gui_running")
+        set guifont=Ubuntu\ Mono:h16
+        set background=dark
+        colorscheme solarized
+    endif
+
+" }
+
 
 " Plugins {
 
