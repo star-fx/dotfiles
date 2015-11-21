@@ -1,7 +1,6 @@
 " Basic {
 
     set nocompatible
-    set nobackup
     set nobomb
     set noeb
     set number
@@ -16,13 +15,11 @@
     set wrap
     set linebreak
     syntax enable
-    syntax on
     filetype plugin indent on
-    set background=dark
 
 " }
 
-" Tab key {
+" Tab & Space {
 
     set tabstop=4
     set softtabstop=4
@@ -50,24 +47,24 @@
 
 " Utils {
 
-runtime macros/matchit.vim
+    runtime macros/matchit.vim
 
 " }
 
 " Plugins {
 
-" Vundle start
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/vundle'
+    " Vundle start
+    filetype off
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    Plugin 'gmarik/vundle'
 
-" YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
-let g:ycm_autoclose_preview_window_after_completion = 1
+    " YouCompleteMe
+    Plugin 'Valloric/YouCompleteMe'
+    let g:ycm_autoclose_preview_window_after_completion = 1
 
-" Vundle end
-call vundle#end()
-filetype plugin indent on
+    " Vundle end
+    call vundle#end()
+    filetype plugin indent on
 
 " }
