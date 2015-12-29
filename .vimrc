@@ -10,9 +10,8 @@
     set title
     set visualbell
     set hidden
-    set wrap
     set linebreak
-    syntax enable
+    syntax on
     filetype plugin indent on
 
 " }
@@ -32,8 +31,6 @@
     set hlsearch
     set ignorecase
     set smartcase
-    set showmatch
-
 " }
 
 " Encoding {
@@ -49,7 +46,6 @@
 
 " }
 
-
 " GUI {
 
     if has("gui_running")
@@ -59,7 +55,6 @@
     endif
 
 " }
-
 
 " Plugins {
 
