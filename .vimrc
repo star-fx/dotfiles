@@ -58,7 +58,7 @@
 
 " Plugins {
 
-    " Vundle start
+    " Vundle begin
     filetype off
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
