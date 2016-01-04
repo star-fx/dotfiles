@@ -21,6 +21,10 @@
 
 (global-hl-line-mode t) ;; higlight current line
 
+;; edit
+
+(setq require-final-newline t)
+
 ;; ido
 (ido-mode t)
 
@@ -36,6 +40,8 @@
 (tool-bar-mode -1) ;; tool bar off
 (scroll-bar-mode -1) ;; scroll bar off
 (load-theme 'atom-one-dark t) ;; color theme
+(add-to-list 'default-frame-alist '(font . "Ubuntu Mono 12"))
+(set-fontset-font t 'han (font-spec :family "WenQuanYi Micro Hei Mono" :size 16))
 
 ;; evil mode
 ;; (evil-mode t)
