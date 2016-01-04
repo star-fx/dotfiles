@@ -17,6 +17,8 @@
 (electric-pair-mode t) ;; auto close bracket insertion
 (show-paren-mode t) ;; highlight matching brackets
 
+(fset 'yes-or-no-p 'y-or-n-p) ;; change yes-or-no to y-or-n
+
 (global-hl-line-mode t) ;; higlight current line
 
 ;; ido
@@ -33,3 +35,7 @@
 (menu-bar-mode -1) ;; menu bar off
 (tool-bar-mode -1) ;; tool bar off
 (scroll-bar-mode -1) ;; scroll bar off
+(load-theme 'atom-one-dark t) ;; color theme
+
+;; evil mode
+;; (evil-mode t)
