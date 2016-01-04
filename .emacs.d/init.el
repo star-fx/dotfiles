@@ -19,6 +19,8 @@
 
 (fset 'yes-or-no-p 'y-or-n-p) ;; change yes-or-no to y-or-n
 
+(global-visual-line-mode t) ;; word wrap on
+
 (global-hl-line-mode t) ;; higlight current line
 
 ;; edit
