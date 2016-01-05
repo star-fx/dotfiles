@@ -54,6 +54,7 @@
         set guioptions-=L
         set guioptions-=r
         set guifont=Ubuntu\ Mono\ 12
+        set guifontwide=WenQuanYi\ Micro\ Hei\ Mono\ 12
         set background=dark
         colorscheme solarized
     endif
