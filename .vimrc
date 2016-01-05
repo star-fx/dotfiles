@@ -49,7 +49,11 @@
 " GUI {
 
     if has("gui_running")
-        set guifont=Ubuntu\ Mono:h16
+        set guioptions-=m
+        set guioptions-=T
+        set guioptions-=L
+        set guioptions-=r
+        set guifont=Ubuntu\ Mono\ 12
         set background=dark
         colorscheme solarized
     endif
@@ -65,8 +69,8 @@
     Plugin 'gmarik/vundle'
 
     " YouCompleteMe
-    Plugin 'Valloric/YouCompleteMe'
-    let g:ycm_autoclose_preview_window_after_completion = 1
+    " Plugin 'Valloric/YouCompleteMe'
+    " let g:ycm_autoclose_preview_window_after_completion = 1
 
     " Vundle end
     call vundle#end()
