@@ -46,6 +46,15 @@
 
 " }
 
+" Key mapping {
+
+    inoremap <C-E> <End>
+    inoremap <C-A> <Home>
+    inoremap <C-B> <Left>
+    inoremap <C-F> <Right>
+
+" }
+
 " GUI {
 
     if has("gui_running")
