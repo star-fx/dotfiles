@@ -62,10 +62,16 @@
         set guioptions-=T
         set guioptions-=L
         set guioptions-=r
-        set guifont=Ubuntu\ Mono\ 12
-        set guifontwide=WenQuanYi\ Micro\ Hei\ Mono\ 12
         set background=dark
         colorscheme solarized
+        if has("mac")
+            set guifont=Ubuntu\ Mono:h14
+        elseif has("gui_gtk2")
+            set guifont=Ubuntu\ Mono\ 14
+            set guifontwide=WenQuanYi\ Micro\ Hei\ Mono\ 14
+        elseif has("gui_win32")
+            set guifont=Ubuntu_Mono:h14:cANSI
+        endif
     endif
 
 " }
