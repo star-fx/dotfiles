@@ -86,6 +86,10 @@
     " Plugin 'Valloric/YouCompleteMe'
     " let g:ycm_autoclose_preview_window_after_completion = 1
 
+    Plugin 'bling/vim-airline'
+    let g:airline_powerline_fonts = 1
+    let g:airline_theme='bubblegum'
+
     " Vundle end
     call vundle#end()
     filetype plugin indent on
