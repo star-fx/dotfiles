@@ -65,7 +65,7 @@
         set background=dark
         colorscheme solarized
         if has("mac")
-            set guifont=Ubuntu\ Mono:h14
+            set guifont=Ubuntu\ Mono\ derivative\ Powerline:h15
         elseif has("gui_gtk2")
             set guifont=Ubuntu\ Mono\ 14
             set guifontwide=WenQuanYi\ Micro\ Hei\ Mono\ 14
@@ -89,6 +89,9 @@
     Plugin 'bling/vim-airline'
     let g:airline_powerline_fonts = 1
     let g:airline_theme='bubblegum'
+
+    Plugin 'nathanaelkane/vim-indent-guides'
+    let g:indent_guides_guide_size=1
 
     " Vundle end
     call vundle#end()
