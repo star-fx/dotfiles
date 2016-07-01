@@ -1,49 +1,70 @@
-;; package
+;;------------------------------------------------------------------------------
+;; Package Management
+;;------------------------------------------------------------------------------
 (require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-;; basic
-(setq inhibit-startup-screen t) ;; startup message off
-(setq initial-scratch-message nil) ;; startup scratch empty
 
-(setq make-backup-files nil) ;; backup file off
-(setq auto-save-default nil) ;; auto save off
+;;------------------------------------------------------------------------------
+;; Basic
+;;------------------------------------------------------------------------------
+(setq inhibit-startup-message t) ;; welcome page off
+(setq ring-bell-function 'ignore) ;; alarm off
 
-(global-linum-mode 1) ;; line number on
-(setq linum-format "%d") ;; line number format
 
-(electric-pair-mode t) ;; auto close bracket insertion
-(show-paren-mode t) ;; highlight matching brackets
-
-(fset 'yes-or-no-p 'y-or-n-p) ;; change yes-or-no to y-or-n
-
-(global-visual-line-mode t) ;; word wrap on
-
-(global-hl-line-mode t) ;; higlight current line
-
-;; edit
-
-(setq require-final-newline t)
-
-;; ido
-(ido-mode t)
-
-;; smex
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-
-;; calendar
-(setq calendar-week-start-day 1)
-
-;; gui
+;;------------------------------------------------------------------------------
+;; GUI
+;;------------------------------------------------------------------------------
 (menu-bar-mode -1) ;; menu bar off
 (tool-bar-mode -1) ;; tool bar off
 (scroll-bar-mode -1) ;; scroll bar off
-(load-theme 'atom-one-dark t) ;; color theme
-(add-to-list 'default-frame-alist '(font . "Ubuntu Mono 12"))
-(set-fontset-font t 'han (font-spec :family "WenQuanYi Micro Hei Mono" :size 16))
 
-;; evil mode
-;; (evil-mode t)
+
+;;------------------------------------------------------------------------------
+;; Font and Theme
+;;------------------------------------------------------------------------------
+(add-to-list 'default-frame-alist '(font . "Ubuntu Mono-16"))
+;; (load-theme 'solarized-dark t)
+
+
+;;------------------------------------------------------------------------------
+;; Backup and Autosave
+;;------------------------------------------------------------------------------
+(setq make-backup-files nil) ;; backup off 
+(setq auto-save-default nil) ;; autosave off
+
+
+;;------------------------------------------------------------------------------
+;; Edit
+;;------------------------------------------------------------------------------
+(setq linum-format "%d ") ;; line number format
+(global-linum-mode t) ;; line number on
+(electric-pair-mode 1) ;; auto close bracket
+(show-paren-mode 1) ;; show matched pair
+(global-visual-line-mode 1) ;; soft word wrap
+
+
+;;------------------------------------------------------------------------------
+;; Calendar mode
+;;------------------------------------------------------------------------------
+(setq calendar-week-start-day 1) ;; 
+
+
+;;------------------------------------------------------------------------------
+;; Ido Mode
+;;------------------------------------------------------------------------------
+(ido-mode t)
+
+
+;;------------------------------------------------------------------------------
+;; Smex Mode
+;;------------------------------------------------------------------------------
+(global-set-key (kbd "M-x") 'smex)
+
+
+;;------------------------------------------------------------------------------
+;; markdown mode
+;;------------------------------------------------------------------------------
+(custom-set-variables '(markdown-command "/usr/local/bin/pandoc -f markdown -t html"))
+
