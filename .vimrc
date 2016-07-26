@@ -1,4 +1,4 @@
-" Basic {
+
 
     set nocompatible
     set number
@@ -65,10 +65,10 @@
         set background=dark
         colorscheme solarized
         if has("mac")
-            set guifont=Ubuntu\ Mono\ derivative\ Powerline:h15
+            set guifont=mononoki:h15
         elseif has("gui_gtk2")
-            set guifont=Ubuntu\ Mono\ 14
-            set guifontwide=WenQuanYi\ Micro\ Hei\ Mono\ 14
+            set guifont=mononoki:h15
+            set guifontwide=mononoki:h15
         endif
     endif
 
@@ -82,9 +82,7 @@
     call vundle#begin()
     Plugin 'gmarik/vundle'
 
-    " YouCompleteMe
-    " Plugin 'Valloric/YouCompleteMe'
-    " let g:ycm_autoclose_preview_window_after_completion = 1
+    Plugin 'flazz/vim-colorschemes'
 
     Plugin 'bling/vim-airline'
     let g:airline_powerline_fonts = 1
