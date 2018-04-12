@@ -1,4 +1,4 @@
-
+" Basic {
 
     set nocompatible
     set number
