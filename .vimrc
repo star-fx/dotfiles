@@ -57,6 +57,9 @@
         set guioptions-=r
         set background=dark
         colorscheme dracula
+        if has("mac")
+            set guifont=mononoki:h16
+        endif
         if has("win32")
             set guifont=mononoki:h12
             source $VIMRUNTIME/delmenu.vim
