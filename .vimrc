@@ -6,10 +6,12 @@
     set showmode
     set laststatus=2
     set backspace=start,eol,indent
+    set scrolloff=5
     set title
     set visualbell
     set hidden
     set linebreak
+    set background=dark
     syntax on
     filetype plugin indent on
 " }
@@ -21,6 +23,14 @@
     set expandtab
 " }
 
+" Indent {
+    set cindent
+" }
+
+" Encoding {
+    set encoding=utf-8
+" }
+
 " Search {
     set incsearch
     set hlsearch
@@ -28,42 +38,37 @@
     set smartcase
 " }
 
-" Encoding {
-    set encoding=UTF-8
-    set fileencoding=UTF-8
-" }
-
 " Utils {
     packadd! matchit
 " }
 
 " Key Mapping {
-    inoremap <C-E> <End>
-    inoremap <C-A> <Home>
+    " inoremap <C-E> <End>
+    " inoremap <C-A> <Home>
     inoremap <C-B> <Left>
     inoremap <C-F> <Right>
 " }
 
 " Plugin AirLine {
+"   https://github.com/vim-airline/vim-airline.git
+"   https://github.com/vim-airline/vim-airline-themes.git
     let g:airline_powerline_fonts = 1
     let g:airline_theme='bubblegum'
 " }
 
+" Plugin Dracula {
+"   https://github.com/dracula/vim.git
+" }
+
 " GUI {
     if has("gui_running")
+        colorscheme dracula
+        set guifont=mononoki:h17
         set guioptions-=m
         set guioptions-=T
         set guioptions-=l
+        set guioptions-=L
         set guioptions-=r
-        set background=dark
-        colorscheme dracula
-        if has("mac")
-            set guifont=mononoki:h16
-        endif
-        if has("win32")
-            set guifont=mononoki:h12
-            source $VIMRUNTIME/delmenu.vim
-            source $VIMRUNTIME/menu.vim
-        endif
+        set guioptions-=R
     endif
 " }
