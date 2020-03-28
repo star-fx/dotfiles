@@ -11,6 +11,7 @@
     set visualbell
     set hidden
     set linebreak
+    set breakindent
     set background=dark
     syntax on
     filetype plugin indent on
@@ -47,23 +48,49 @@
     " inoremap <C-A> <Home>
     inoremap <C-B> <Left>
     inoremap <C-F> <Right>
+
+    " cnoremap <C-E> <End> " this is the default behavior
+    cnoremap <C-A> <Home>
+    cnoremap <C-B> <Left>
+    cnoremap <C-F> <Right>
+
+    nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " }
 
-" Plugin AirLine {
-"   https://github.com/vim-airline/vim-airline.git
-"   https://github.com/vim-airline/vim-airline-themes.git
-    let g:airline_powerline_fonts = 1
+" Plugin {
+    call plug#begin()
+
+    " startify
+    Plug 'mhinz/vim-startify'
+
+    " polyglot
+    Plug 'sheerun/vim-polyglot'
+
+    " airline
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
     let g:airline_theme='bubblegum'
-" }
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#tabline#enabled = 1
 
-" Plugin Dracula {
-"   https://github.com/dracula/vim.git
+    " dracula
+    Plug 'dracula/vim', {'as': 'dracula'}
+
+    call plug#end()
 " }
 
 " GUI {
     if has("gui_running")
+        " Theme
         colorscheme dracula
+        " Font
         set guifont=mononoki:h17
+
+        set mouse=a
+        set termguicolors
+        set guicursor=
+
+        " Display
         set guioptions-=m
         set guioptions-=T
         set guioptions-=l
@@ -72,3 +99,4 @@
         set guioptions-=R
     endif
 " }
+
